@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "304511314175",
+    "firebase_url": "https://socialapp-44748.firebaseio.com",
+    "project_id": "socialapp-44748",
+    "storage_bucket": "socialapp-44748.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304511314175:android:1674ccbf12225d361144ca",
+        "android_client_info": {
+          "package_name": "com.example.hyvysocialapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304511314175-n0035iauq2m1u8tmd6lc08gi1ii6uqtq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hyvysocialapp",
+            "certificate_hash": "7a12c4567ec55028f1d661ca60f5645623f2a201"
+          }
+        },
+        {
+          "client_id": "304511314175-jjaqjrec52siv750j3t8gk6muoumv5si.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0YJDmTqR9Vr0r3nC0QC81vF9GUmLZzgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304511314175-jjaqjrec52siv750j3t8gk6muoumv5si.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

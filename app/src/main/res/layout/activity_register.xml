@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FFFFFF"
+    tools:context=".RegisterActivity">
+<TextView
+    android:id="@+id/textview_logo"
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:text="Đăng ký"
+    android:textSize="25sp"
+    android:textColor="#3D8791"/>
+    <ImageView
+        android:layout_below="@id/textview_logo"
+        android:id="@+id/imagelogo"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo1"
+        android:layout_above="@+id/emailTIL"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingTop="3dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/custome_box"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:id="@+id/emailTIL"
+        android:layout_marginBottom="10dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:id="@+id/EmailEt"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingTop="3dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/custome_box"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/emailTIL"
+        android:id="@+id/PassTIL"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Pass"
+            android:id="@+id/PassEt"/>
+    </com.google.android.material.textfield.TextInputLayout>
+<Button
+    android:padding="3dp"
+    android:layout_marginTop="40dp"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/registerBtn"
+    android:text="Đăng ký"
+    android:paddingRight="15dp"
+    android:drawableLeft="@mipmap/ic_login"
+    android:layout_below="@id/PassTIL"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/custom_button1"/>
+    <TextView
+        android:id="@+id/have_accountTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạn đã có tài khoản?Đăng nhập tại đây"
+        android:textAlignment="center"
+        android:layout_below="@id/registerBtn"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"/>
+
+</RelativeLayout>

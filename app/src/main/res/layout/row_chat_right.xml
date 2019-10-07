@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/messageLayout"
+    android:padding="10dp">
+    <LinearLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/profileIv"
+            android:visibility="gone"
+            android:background="@null"
+            android:src="@drawable/ic_useravatar"/>
+        <LinearLayout
+            android:id="@+id/layoutmessg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/messageTv"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_sender"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="Hello every one"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/checkseen"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_seen"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/isSeenTv"
+        android:gravity="right"
+        android:text="Chưa nhận"
+        />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutintro"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_list">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="108dp"
+        android:background="#4FFFFFFF"
+        android:drawableRight="@drawable/ic_next"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tabLayout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="198dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@drawable/tab_selector">
+
+    </com.google.android.material.tabs.TabLayout>
+    <Button
+        android:visibility="invisible"
+        android:fontFamily="@font/icielcada"
+        android:id="@+id/buttonstart"
+        android:layout_width="143dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/custom_button1"
+        android:text="Bắt Đầu!"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager"
+        app:layout_constraintStart_toStartOf="@+id/viewPager" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

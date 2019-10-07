@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_bg"
+    android:padding="10dp">
+    <TextView
+        android:paddingLeft="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập Email cần đổi mật khẩu"
+        android:textSize="20sp"
+        android:fontFamily="@font/icielcada"
+        android:textColor="#2AA4B8"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="50dp"
+        android:hint="Nhập email cần khôi phục"
+        android:background="@drawable/custome_box"
+        android:padding="10dp"
+        android:id="@+id/Email_recover"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:id="@+id/button_cancle"
+            android:background="@drawable/custom_button1"/>
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Đặt lại mật khẩu"
+            android:id="@+id/button_sendpassrecover"
+            android:background="@drawable/custom_button"/>
+    </LinearLayout>
+
+</LinearLayout>
