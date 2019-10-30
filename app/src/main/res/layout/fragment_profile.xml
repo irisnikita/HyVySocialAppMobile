@@ -7,7 +7,7 @@
     tools:context=".Fragments.ProfileFragment">
 
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
@@ -23,6 +23,7 @@
 
             </ImageView>
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:orientation="horizontal"
@@ -73,9 +74,17 @@
                     />
                 </LinearLayout>
             </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_posts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linearLayout"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
         </RelativeLayout>
 
-    </ScrollView>
+    </RelativeLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:src="@drawable/ic_fab"

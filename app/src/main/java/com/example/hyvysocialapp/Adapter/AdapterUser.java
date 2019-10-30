@@ -1,6 +1,8 @@
 package com.example.hyvysocialapp.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hyvysocialapp.ChatActivity;
 import com.example.hyvysocialapp.Model.ModelUsers;
 import com.example.hyvysocialapp.R;
+import com.example.hyvysocialapp.ThereProfileActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
@@ -76,9 +79,25 @@ public class AdapterUser extends RecyclerView.Adapter<AdapterUser.MyHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ChatActivity.class);
-                intent.putExtra("hisUid",hisUID);
-                context.startActivity(intent);
+
+                //show dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setItems(new String[]{"Profile","Chat"}, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if(i==0){
+                            Intent intent =new Intent(context, ThereProfileActivity.class);
+                            intent.putExtra("uid",hisUID);
+                            context.startActivity(intent);
+                        }
+                        if(i==1){
+                            Intent intent = new Intent(context, ChatActivity.class);
+                            intent.putExtra("hisUid",hisUID);
+                            context.startActivity(intent);
+                        }
+                    }
+                });
+                builder.create().show();
             }
         });
     }
