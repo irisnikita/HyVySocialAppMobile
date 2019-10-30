@@ -40,7 +40,6 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.MyHolder> {
     List<ModelChat> chatList;
     String imageurl;
     FirebaseUser fuser;
-
     public AdapterChat(Context context, List<ModelChat> chatList, String imageurl) {
         this.context = context;
         this.chatList = chatList;
@@ -186,7 +185,7 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.MyHolder> {
 
     class MyHolder extends RecyclerView.ViewHolder{
         ImageView profileIv,checkseen;
-        TextView messageTv,timeTv,isSeenTv;
+        TextView messageTv, timeTv,isSeenTv;
         LinearLayout messageLayout;
         LinearLayout container;
 
@@ -194,6 +193,7 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.MyHolder> {
             super(itemView);
             profileIv=itemView.findViewById(R.id.profileIv);
             messageTv=itemView.findViewById(R.id.messageTv);
+
             timeTv=itemView.findViewById(R.id.timeTv);
             isSeenTv=itemView.findViewById(R.id.isSeenTv);
             checkseen =itemView.findViewById(R.id.checkseen);

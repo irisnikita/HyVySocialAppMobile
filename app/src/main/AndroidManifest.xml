@@ -9,12 +9,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_icon_chat"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ThereProfileActivity"></activity>
+        <activity android:name=".PostDetailActivity"></activity>
+        <activity android:name=".ThereProfileActivity" />
         <activity android:name=".addPostActivity" />
 
         <meta-data

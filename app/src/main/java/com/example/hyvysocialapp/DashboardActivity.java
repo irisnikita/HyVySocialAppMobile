@@ -79,14 +79,13 @@ public class DashboardActivity extends AppCompatActivity {
         ft1.commit();
 
         checkUserSatus();
-        //update token
-//        updateToken(FirebaseInstanceId.getInstance().getToken());
+
     }
-//    public void updateToken(String token){
-//        DatabaseReference ref=FirebaseDatabase.getInstance().getReference("Tokens");
-//        Token mToken = new Token(token);
-//        ref.child(myUid).setValue(mToken);
-//    }
+    public void updateToken(String token){
+        DatabaseReference ref=FirebaseDatabase.getInstance().getReference("Tokens");
+        Token mToken = new Token(token);
+        ref.child(myUid).setValue(mToken);
+    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -157,6 +156,9 @@ private void checkUserSatus() {
         SharedPreferences.Editor editor=sp.edit();
         editor.putString("Current_USERID",myUid);
         editor.apply();
+
+        //        update token
+        updateToken(FirebaseInstanceId.getInstance().getToken());
     }
     else{
         //Người dùng chưa đăng nhập sẽ trờ về màn hình chính

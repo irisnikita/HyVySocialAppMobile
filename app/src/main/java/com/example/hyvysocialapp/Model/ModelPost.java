@@ -1,22 +1,40 @@
 package com.example.hyvysocialapp.Model;
 
 public class ModelPost  {
-    String pId,pTitle,pDescr,pImage,pTime,uid,uEmail,uDp,uName;
+    String pId,pTitle,pDescr,pComments,pLikes,pImage,pTime,uid,uEmail,uDp,uName;
 
     public ModelPost(){
 
     }
 
-    public ModelPost(String pId, String pTitle, String pDescr, String pImage, String pTime, String uid, String uEmail, String uDp, String uName) {
+    public ModelPost(String pId, String pTitle, String pDescr,String pComments, String PLikes, String pImage, String pTime, String uid, String uEmail, String uDp, String uName) {
         this.pId = pId;
         this.pTitle = pTitle;
         this.pDescr = pDescr;
+        this.pLikes = PLikes;
         this.pImage = pImage;
         this.pTime = pTime;
         this.uid = uid;
         this.uEmail = uEmail;
         this.uDp = uDp;
         this.uName = uName;
+        this.pComments=pComments;
+    }
+
+    public String getpComments() {
+        return pComments;
+    }
+
+    public void setpComments(String pComments) {
+        this.pComments = pComments;
+    }
+
+    public String getpLikes() {
+        return pLikes;
+    }
+
+    public void setpLikes(String pLikes) {
+        this.pLikes = pLikes;
     }
 
     public String getpId() {

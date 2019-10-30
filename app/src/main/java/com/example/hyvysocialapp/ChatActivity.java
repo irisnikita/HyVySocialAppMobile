@@ -116,7 +116,7 @@ public class ChatActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(linearLayoutManager);
 //
 //            //create api service
-//        apiService = Client.getRetrofit("https://fcm.googleapis.com/").create(APIService.class);
+        apiService = Client.getRetrofit("https://fcm.googleapis.com/").create(APIService.class);
 
 
 
@@ -284,60 +284,60 @@ public class ChatActivity extends AppCompatActivity {
 
 
 
-//        final DatabaseReference database =FirebaseDatabase.getInstance().getReference("Users").child(myUid);
-//        database.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                ModelUsers user= dataSnapshot.getValue(ModelUsers.class);
-//                if(notify){
-//                    sentNotification(hisUid,user.getName(),message);
-//                }
-//                notify=false;
-//
-//            }
-//
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
+        final DatabaseReference database =FirebaseDatabase.getInstance().getReference("Users").child(myUid);
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                ModelUsers user= dataSnapshot.getValue(ModelUsers.class);
+                if(notify){
+                    sentNotification(hisUid,user.getName(),message);
+                }
+                notify=false;
+
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
 
-//    private void sentNotification(final String hisUid, final String name, final String message) {
-//
-//        DatabaseReference allTokens = FirebaseDatabase.getInstance().getReference("Tokens");
-//        Query query = allTokens.orderByKey().equalTo(hisUid);
-//        query.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for(DataSnapshot ds:dataSnapshot.getChildren()){
-//                    Token token = ds.getValue(Token.class);
-//                    Data data = new Data(myUid,name+":"+message,"New Message",hisUid,R.drawable.logomessage);
-//
-//                    Sender sender = new Sender(data,token.getToken());
-//                    apiService.sendNotification(sender)
-//                            .enqueue(new Callback<Respone>() {
-//                                @Override
-//                                public void onResponse(Call<Respone> call, Response<Respone> response) {
-////                                    Toast.makeText(ChatActivity.this,""+response.message(),Toast.LENGTH_SHORT).show();
-//                                }
-//
-//                                @Override
-//                                public void onFailure(Call<Respone> call, Throwable t) {
-//
-//                                }
-//                            });
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//    }
+    private void sentNotification(final String hisUid, final String name, final String message) {
+
+        DatabaseReference allTokens = FirebaseDatabase.getInstance().getReference("Tokens");
+        Query query = allTokens.orderByKey().equalTo(hisUid);
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds:dataSnapshot.getChildren()){
+                    Token token = ds.getValue(Token.class);
+                    Data data = new Data(myUid,name+":"+message,"New Message",hisUid,R.drawable.logomessage);
+
+                    Sender sender = new Sender(data,token.getToken());
+                    apiService.sendNotification(sender)
+                            .enqueue(new Callback<Respone>() {
+                                @Override
+                                public void onResponse(Call<Respone> call, Response<Respone> response) {
+//                                    Toast.makeText(ChatActivity.this,""+response.message(),Toast.LENGTH_SHORT).show();
+                                }
+
+                                @Override
+                                public void onFailure(Call<Respone> call, Throwable t) {
+
+                                }
+                            });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     private void checkUserSatus() {
         //lấy thông tin người dùng hiện tại

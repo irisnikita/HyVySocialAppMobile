@@ -82,7 +82,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
-        android:layout_height="25dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
@@ -92,55 +92,80 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:textSize="17px"
             android:id="@+id/pTimeTv"
             android:layout_width="70dp"
             android:layout_height="25dp"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:text="33 min"
             android:textColor="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/pLike"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="1,2 k Like"
-            android:textColor="#FFFFFF"
-            app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="20px"
+                android:paddingLeft="20px"
+                android:id="@+id/pLike"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="1,2 k Like"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:textSize="20px"
+                android:paddingLeft="20px"
+                android:id="@+id/pCommentsTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="1,2 k Comments"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
 
         <TextView
+            android:textSize="20px"
             android:id="@+id/plikeTv"
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableLeft="@drawable/ic_like_post"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:text="Like"
             android:textColor="#FFFFFF" />
 
         <TextView
+            android:textSize="20px"
             android:id="@+id/pCommentTv"
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableLeft="@drawable/ic_comment_post"
-            android:gravity="center"
+
+            android:gravity="center_vertical"
             android:text="Comments"
             android:textColor="#FFFFFF" />
 
         <TextView
+            android:textSize="20px"
             android:id="@+id/pShareTv"
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableLeft="@drawable/ic_share_post"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:text="Share"
             android:textColor="#FFFFFF" />
 
